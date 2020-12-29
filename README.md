@@ -48,12 +48,12 @@ Things you may want to cover:
 | ------      | ------     | ----------- |
 | item_name   | string     | null: false |
 | explanation | text       | null: false |
-| category_id   | string     | null: false |
-| condition_id  | string     | null: false |
-| charge_id     | string     | null: false |
-| area_id       | string     | null: false |
-| day_id        | string     | null: false |
-| price_id      | numeric    | null: false |
+| category_id   | integer    | null: false |
+| condition_id  | integer    | null: false |
+| charge_id     | integer    | null: false |
+| area_id       | integer    | null: false |
+| day_id        | integer    | null: false |
+| price_id      | integer    | null: false |
 | user          | references | foreign_key: true |
 
 
