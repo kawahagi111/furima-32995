@@ -30,7 +30,7 @@ Things you may want to cover:
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | nicname  | string | null: false |
-| email    | string | null: false　unique: turu |
+| email    | string | null: false　unique: ture |
 | encrypred_password | string | null: false |
 | last_name          | string | null: false |
 | first_name         | string | null: false |
