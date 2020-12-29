@@ -29,15 +29,17 @@ Things you may want to cover:
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| name     | string | null: false |
-| email    | string | null: false |
-| password | string | null: false |
 | nicname  | string | null: false |
+| email    | string | null: false　unique: turu |
+| encrypred_password | string | null: false |
+| name     | string | null: false |
+| name_two | string | null: false |
+| birthday | string | null: false |
 ### Association
 
 - has_many :items
 - has_many :buys
-- has_one :addresses
+- has_one  :addresse
 
 
 ## items テーブル
@@ -46,12 +48,13 @@ Things you may want to cover:
 | ------      | ------     | ----------- |
 | item_name   | string     | null: false |
 | explanation | text       | null: false |
-| category    | string     | null: false |
-| condition   | string     | null: false |
-| charge      | string     | null: false |
-| area        | string     | null: false |
-| day         | string     | null: false |
-| user        | references | null: false, foreign_key: true |
+| category_id   | string     | null: false |
+| condition_id  | string     | null: false |
+| charge_id     | string     | null: false |
+| area_id       | string     | null: false |
+| day_id        | string     | null: false |
+| price_id      | numeric    | null: false |
+| user          | references | foreign_key: true |
 
 
 
@@ -73,7 +76,7 @@ Things you may want to cover:
 
 - belongs_to :user
 - belongs_to :item
-- has_one :buy
+- has_one    :addresse
 
 
 
@@ -81,13 +84,12 @@ Things you may want to cover:
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| user    | references | null: false, foreign_key: true |
 | postal_code   | string | null: false                    |
-| prefecture    | string | null: false                    |
+| area_id       |integer | null: false                    |
 | city          | string | null: false                    |
 | house_number  | string | null: false                    |
 | building_name | string |                                |
-| phone         | numeric | null: false                   |
+| phone         | string | null: false                   |
 
 ### Association
 
