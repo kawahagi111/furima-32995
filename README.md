@@ -32,11 +32,11 @@ Things you may want to cover:
 | nicname  | string | null: false |
 | email    | string | null: false　unique: turu |
 | encrypred_password | string | null: false |
-| name     | string | null: false |
-| name_two | string | null: false |
-| name_three | string | null: false |
-| name_four  | string | null: false |
-| birthday | string | null: false |
+| name               | string | null: false |
+| name_two           | string | null: false |
+| name_kana          | string | null: false |
+| name_two_kana      | string | null: false |
+| birthday | date    | null: false |
 ### Association
 
 - has_many :items
@@ -54,7 +54,7 @@ Things you may want to cover:
 | charge_id     | integer    | null: false |
 | area_id       | integer    | null: false |
 | day_id        | integer    | null: false |
-| price         | numeric    | null: false |
+| price         | integer    | null: false |
 | user          | references | foreign_key: true |
 
 
@@ -77,7 +77,7 @@ Things you may want to cover:
 
 - belongs_to :user
 - belongs_to :item
-- has_one    :addresse
+- has_one    :address
 
 
 
