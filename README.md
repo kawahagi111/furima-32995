@@ -32,10 +32,10 @@ Things you may want to cover:
 | nicname  | string | null: false |
 | email    | string | null: false　unique: turu |
 | encrypred_password | string | null: false |
-| name               | string | null: false |
-| name_two           | string | null: false |
-| name_kana          | string | null: false |
-| name_two_kana      | string | null: false |
+| last_name          | string | null: false |
+| first_name         | string | null: false |
+| last_name_kana     | string | null: false |
+| first_name_kana    | string | null: false |
 | birthday | date    | null: false |
 ### Association
 
