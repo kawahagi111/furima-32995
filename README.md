@@ -34,12 +34,13 @@ Things you may want to cover:
 | encrypred_password | string | null: false |
 | name     | string | null: false |
 | name_two | string | null: false |
+| name_three | string | null: false |
+| name_four  | string | null: false |
 | birthday | string | null: false |
 ### Association
 
 - has_many :items
 - has_many :buys
-- has_one  :addresse
 
 
 ## items テーブル
@@ -53,7 +54,7 @@ Things you may want to cover:
 | charge_id     | integer    | null: false |
 | area_id       | integer    | null: false |
 | day_id        | integer    | null: false |
-| price_id      | integer    | null: false |
+| price         | numeric    | null: false |
 | user          | references | foreign_key: true |
 
 
@@ -89,9 +90,9 @@ Things you may want to cover:
 | city          | string | null: false                    |
 | house_number  | string | null: false                    |
 | building_name | string |                                |
-| phone         | string | null: false                   |
+| phone         | string | null: false                    |
+| buy           |references | foreign_key: true           |
 
 ### Association
 
-- belongs_to :user
 - belongs_to :buy
