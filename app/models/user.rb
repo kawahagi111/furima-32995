@@ -8,11 +8,12 @@ class User < ApplicationRecord
        has_many :buys
        
        validates_format_of :password, with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
-       validates :nickname,         presence: true
-       validates :last_name,        presence: true, format: {with: /\A[ぁ-ん一-龥]+\z/} 
-       validates :first_name,       presence: true, format: {with: /\A[ぁ-ん一-龥]+\z/}
-       validates :last_name_kana,   presence: true, format: {with: /\p{katakana}/}
-       validates :first_name_kana,  presence: true, format: {with: /\p{katakana}/}
-       validates :birthday,         presence: true
-       
+      with_options presence: true do
+       validates :nickname         
+       validates :last_name, format: {with: /\A[ぁ-ん一-龥]+\z/} 
+       validates :first_name,        format: {with: /\A[ぁ-ん一-龥]+\z/}
+       validates :last_name_kana,    format: {with: /\p{katakana}/}
+       validates :first_name_kana,   format: {with: /\p{katakana}/}
+       validates :birthday
+      end
 end
