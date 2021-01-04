@@ -2,6 +2,12 @@ class ItemsController < ApplicationController
   def index
   end
 
+  def edit
+  end
+
+  def create
+  end
+
   private
 
   def message_params
