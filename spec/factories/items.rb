@@ -9,5 +9,9 @@ FactoryBot.define do
     day_id                 { '2' }
     price                  { '555' }
     association :user
+
+    after(:build) do |item|
+      item.image.attach(io: File.open('app/assets/images/item-sample.png'), filename: 'item_sample.png')
+    end
   end
 end

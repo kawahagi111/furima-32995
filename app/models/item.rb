@@ -26,5 +26,6 @@ class Item < ApplicationRecord
     validates :area_id
     validates :day_id
     validates :price
+    validates :image
   end
 end
