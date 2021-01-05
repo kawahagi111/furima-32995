@@ -1,4 +1,4 @@
 FactoryBot.define do
-  factory :genre do
+  factory :condition do
   end
 end
