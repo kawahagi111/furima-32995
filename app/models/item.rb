@@ -8,11 +8,11 @@ class Item < ApplicationRecord
 
   # ジャンルの選択が「--」の時は保存できないようにする
   with_options numericality: { other_than: 1 } do
-  validates :area_id
-  validates :category_id
-  validates :charge_id
-  validates :condition_id
-  validates :day_id
+    validates :area_id
+    validates :category_id
+    validates :charge_id
+    validates :condition_id
+    validates :day_id
   end
 
   belongs_to :user
