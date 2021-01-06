@@ -7,11 +7,13 @@ class Item < ApplicationRecord
   belongs_to :day
 
   # ジャンルの選択が「--」の時は保存できないようにする
-  validates :area_id, numericality: { other_than: 1 }
-  validates :category_id, numericality: { other_than: 1 }
-  validates :charge_id, numericality: { other_than: 1 }
-  validates :condition_id, numericality: { other_than: 1 }
-  validates :day_id, numericality: { other_than: 1 }
+  with_options numericality: { other_than: 1 } do
+  validates :area_id
+  validates :category_id
+  validates :charge_id
+  validates :condition_id
+  validates :day_id
+  end
 
   belongs_to :user
   has_one_attached :image
