@@ -15,8 +15,10 @@ class Item < ApplicationRecord
     validates :day_id
   end
 
+  has_one :buy
   belongs_to :user
   has_one_attached :image
+
   validates_inclusion_of :price, in: 300..9_999_999
   validates_format_of :price, with: /\A-?[0-9]+(\.[0-9]+)?\z/
   with_options presence: true do
