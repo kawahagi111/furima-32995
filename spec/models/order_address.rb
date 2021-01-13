@@ -55,6 +55,21 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include 'Phone is invalid.'
       end
+      it 'ハイフンが入っている場合は購入できない' do
+        @order_address.phone = '11111-11'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include 'Phone is invalid.'
+      end
+      it '9桁以下の場合は購入できない' do
+        @order_address.phone = '1111111'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include 'Phone is invalid.'
+      end
+      it '半角文字が入っている場合は購入できない' do
+        @order_address.phone = '11111111a1'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include 'Phone is invalid.'
+      end
     end
   end
 end

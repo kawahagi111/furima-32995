@@ -1,5 +1,7 @@
 FactoryBot.define do
   factory :order_address do
+    user_id { 3 }
+    item_id { 3 }
     token { 'token' }
     postal_code             { '645-0333' }
     area_id                 { 3 }
