@@ -1,6 +1,6 @@
 class OrderAddress
   include ActiveModel::Model
-  attr_accessor :postal_code, :area_id, :city, :house_number, :building_name, :phone, :user_id, :item_id, :order_id, :token
+  attr_accessor :postal_code, :area_id, :city, :house_number, :building_name, :phone, :user_id, :item_id, :token
 
   # addressesテーブルとordersテーブルのカラム名を書いておく
   with_options presence: true do
