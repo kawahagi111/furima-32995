@@ -15,7 +15,7 @@ class Item < ApplicationRecord
     validates :day_id
   end
 
-  has_one :buy
+  has_one :order
   belongs_to :user
   has_one_attached :image
 
